@@ -1,0 +1,210 @@
+/* styles.css */
+/* styles.css */
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Warna putih */
+    overflow: hidden; /* Mengatur overflow agar tetesan hujan tidak terlihat di luar batas halaman */
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #007bff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.slider {
+    position: relative;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+}
+/* styles.css */
+
+/* Existing CSS styles */
+
+input[type="text"] {
+    width: calc(100% - 40px); /* Mengurangi 40px dari lebar maksimum untuk memberikan ruang bagi tombol */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px; /* Menetapkan lebar tombol agar tetap terlihat proporsional */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.loading-spinner {
+    display: none;
+    margin: 20px 0;
+}
+
+#tiktok-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#tiktok-content a:hover {
+    background-color: #218838;
+}
+
+/* Additional responsive styles for smaller devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .slider {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
